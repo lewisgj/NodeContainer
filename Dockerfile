@@ -28,7 +28,7 @@ RUN bash -l -c "source $NVM_DIR/nvm.sh \
     && nvm use default"
 
 # Install NPM packages
-RUN bash -l -c "source $NVM_DIR/nvm.sh && npm install -g angular-cli"
+RUN bash -l -c "source $NVM_DIR/nvm.sh && npm install -g angular-cli create-react-app"
 
 ENTRYPOINT bash 
 
