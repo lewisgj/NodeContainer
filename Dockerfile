@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y -q \
         python \
         wget \
         vim  \
+        dos2unix \
 && rm -rf /var/lib/apt/lists/*
 
 # Use non-root user
@@ -30,6 +31,6 @@ RUN bash -l -c "source $NVM_DIR/nvm.sh \
 # Install NPM packages
 RUN bash -l -c "source $NVM_DIR/nvm.sh && npm install -g angular-cli create-react-app"
 
-ENTRYPOINT bash 
+ENTRYPOINT ["bash", "--login"]
 
 
